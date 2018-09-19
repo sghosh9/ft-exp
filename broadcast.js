@@ -16,40 +16,33 @@ class A {
   }
 
   // Broadcastes an event with the trigger info
-  broadcast(trigger) {
-      trigger = trigger || this;
+  broadcast(payload) {
       var broadcastEvent = new Event('broadcast');
-      broadcastEvent.trigger = trigger;
+      broadcastEvent.payload = payload;
       document.dispatchEvent(broadcastEvent);
   }
 
   // Listens to broadcasts
   receiver(event) {
-      this !== event.trigger && console.log('belongs to', this, 'event', event.trigger);
+    // this !== event.trigger && console.log('me', this, 'trigger', event.trigger);
+
+    // Run filter ops
+    var filteredData = this !== event.payload.trigger && Operations.filter(event.payload.filterFn, this);
+    this !== event.payload.trigger && console.log(this.name, event.payload.trigger.data[filteredData[0]] || []);
   }
 
   // Propagates to the origin
-  propagate() {
-      // Get origin and call it's broadcast.
-      this.origin.broadcast(this);
+  propagate(filterFn) {
+    // Get origin and call it's broadcast.
+    var payload = {
+      trigger: this,
+      filterFn: filterFn
+    };
+    this.origin.broadcast(payload);
   }
 
   // Sets the origin parent
   setOrigin() {
     return this.parent && this.parent.origin ? this.parent.origin : this.parent;
   }
-}
-
-function createChild(name, obj, gdpFilter) {
-  var childObj = new obj.constructor(name, obj);
-  if (!obj.index.length) {
-    obj.index = Array.from(Array(obj.data.length).keys())
-  }
-  var filteredData = gdpFilter && obj.index.filter(row => obj.data[row][1] > gdpFilter);
-  childObj.data = obj.data;
-  childObj.index = filteredData;
-
-  obj.children.push(childObj);
-
-  return childObj;
 }

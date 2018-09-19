@@ -203,13 +203,15 @@ var dataset = [
 
 var a = new A('a', null, dataset);
 
-var b = createChild('b', a, 5000000);
-var c = createChild('c', a, 1000);
+var b = Operations.createChild('b', a, (obj, row) => obj.data[row][1] >= 5000000);
+var c = Operations.createChild('c', a, (obj, row) => obj.data[row][1] < 5000000);
 
-var d = createChild('d', c, 10000);
-var e = createChild('e', c, 40000);
-var f = createChild('f', c, 80000);
+var d = Operations.createChild('d', c, (obj, row) => obj.data[row][1] > 10000);
+var e = Operations.createChild('e', c, (obj, row) => obj.data[row][1] > 40000);
+var f = Operations.createChild('f', c, (obj, row) => obj.data[row][1] > 80000);
 
+var g = Operations.createChild('g', b, (obj, row) => obj.data[row][1] > 80000);
+var h = Operations.createChild('h', b, (obj, row) => obj.data[row][1] > 80000);
 // var g = createChild('g', b);
 // var h = createChild('h', b);
 
@@ -220,4 +222,4 @@ var f = createChild('f', c, 80000);
 
 // var l = createChild('l', k);
 
-d.propagate();
+d.propagate((obj, row) => obj.data[row][0] === 'India');
