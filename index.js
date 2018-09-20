@@ -1,225 +1,49 @@
 var dataset = [
-  ['Colombia', 309191],
-  ['Jordan', 40068],
-  ['Paraguay', 29735],
-  ['Bhutan', 2512],
-  ['Dominica', 563],
-  ['Costa Rica', 57057],
-  ['Djibouti', 1845],
-  ['Solomon Islands', 1303],
-  ['Zimbabwe', 17846],
-  ['Benin', 9274],
-  ['Turkey', 851102],
-  ['Puerto Rico', 105035],
-  ['Isle of Man', 6792],
-  ['Timor-Leste', 2955],
-  ['Montenegro', 4774],
-  ['Nepal', 24472],
-  ['Kenya', 74938],
-  ['Cabo Verde', 1754],
-  ['Switzerland', 678887],
-  ['Sudan', 117488],
-  ['Kuwait', 120126],
-  ['West Bank and Gaza', 14498],
-  ['Antigua and Barbuda', 1532],
-  ['Netherlands', 826200],
-  ['Luxembourg', 62404],
-  ['Belgium', 492681],
-  ['Kazakhstan', 159407],
-  ['Saudi Arabia', 683827],
-  ['Cameroon', 34799],
-  ['Denmark', 324872],
-  ['Mongolia', 11488],
-  ['Korea Rep.', 1530751],
-  ['Bosnia and Herzegovina', 18169],
-  ['St. Lucia', 1712],
-  ['Dominican Republic', 75932],
-  ['Spain', 1311320],
-  ['Samoa', 857],
-  ['Philippines', 313595],
-  ['Finland', 251885],
-  ['Afghanistan', 20815],
-  ['Kiribati', 196],
-  ['Congo Dem. Rep.', 37241],
-  ['Cyprus', 21652],
-  ['Haiti', 8408],
-  ['Poland', 524510],
-  ['Vanuatu', 863],
-  ['Senegal', 16375],
-  ['Armenia', 11537],
-  ['San Marino', 1659],
-  ['Bahrain', 35307],
-  ['Swaziland', 4409],
-  ['American Samoa', 658],
-  ['Lebanon', 51844],
-  ['Grenada', 1119],
-  ['Estonia', 25921],
-  ['St. Vincent and the Grenadines', 790],
-  ['Gambia The', 1015],
-  ['Burkina Faso', 12873],
-  ['Tonga', 426],
-  ['United Kingdom', 2622434],
-  ['Libya', 50984],
-  ['France', 2582501],
-  ['Botswana', 17407],
-  ['Fiji', 5061],
-  ['Cambodia', 22158],
-  ['Uzbekistan', 48718],
-  ['Austria', 416596],
-  ['St. Kitts and Nevis', 946],
-  ['Moldova', 8128],
-  ['Mauritania', 5025],
-  ['Virgin Islands (U.S.)', 3765],
-  ['Latvia', 30264],
-  ['Greece', 200288],
-  ['Brazil', 2055506],
-  ['United States', 19390604],
-  ['Greenland', 2706],
-  ['El Salvador', 24805],
-  ['Lesotho', 2639],
-  ['Bolivia', 37509],
-  ['Guatemala', 75620],
-  ['Sweden', 538040],
-  ['Papua New Guinea', 21089],
-  ['Israel', 350851],
-  ['Belize', 1838],
-  ['Argentina', 637590],
-  ['Marshall Islands', 199],
-  ['Brunei Darussalam', 12128],
-  ['Seychelles', 1486],
-  ['Tanzania', 52090],
-  ['Ethiopia', 80561],
-  ['Australia', 1323421],
-  ['Cuba', 87133],
-  ['Malawi', 6303],
-  ['Algeria', 170371],
-  ['Italy', 1934798],
-  ['Maldives', 4597],
-  ['Angola', 124209],
-  ['Ukraine', 112154],
-  ['Palau', 292],
-  ['Madagascar', 11500],
-  ['Panama', 61838],
-  ['Qatar', 167605],
-  ['Nicaragua', 13814],
-  ['Kosovo', 7129],
-  ['Mozambique', 12334],
-  ['Pakistan', 304952],
-  ['Iceland', 23909],
-  ['China', 12237700],
-  ['Belarus', 54442],
-  ['Bangladesh', 249724],
-  ['Barbados', 4797],
-  ['Suriname', 3324],
-  ['Honduras', 22979],
-  ['Vietnam', 223864],
-  ['Russian Federation', 1577524],
-  ['Mauritius', 13338],
-  ['Hong Kong SAR China', 341449],
-  ['Trinidad and Tobago', 22105],
-  ['Egypt Arab Rep.', 235369],
-  ['Micronesia Fed. Sts.', 336],
-  ['Oman', 72643],
-  ['Mexico', 1149919],
-  ['Croatia', 54849],
-  ['Canada', 1653043],
-  ['Tuvalu', 40],
-  ['Bulgaria', 56832],
-  ['Somalia', 7369],
-  ['Turkmenistan', 42355],
-  ['Lithuania', 47168],
-  ['Guam', 5793],
-  ['South Africa', 349419],
-  ['Yemen Rep.', 18213],
-  ['Portugal', 217571],
-  ['Namibia', 13245],
-  ['Liechtenstein', 6289],
-  ['Slovenia', 48770],
-  ['Rwanda', 9137],
-  ['Czech Republic', 215726],
-  ['Ghana', 47330],
-  ['Uganda', 25891],
-  ['Mali', 15288],
-  ['Malta', 12538],
-  ['Macao SAR China', 50361],
-  ['Norway', 398832],
-  ['Lao PDR', 16853],
-  ['Myanmar', 69322],
-  ['Germany', 3677439],
-  ['Indonesia', 1015539],
-  ['India', 2597491],
-  ['Ecuador', 103057],
-  ['Liberia', 2158],
-  ['United Arab Emirates', 382575],
-  ['Nauru', 114],
-  ['Gabon', 14623],
-  ['Tunisia', 40257],
-  ['Central African Republic', 1949],
-  ['Uruguay', 56157],
-  ['Guinea-Bissau', 1347],
-  ['Andorra', 3013],
-  ['Morocco', 109139],
-  ['Georgia', 15159],
-  ['Zambia', 25809],
-  ['Hungary', 139135],
-  ['Chile', 277076],
-  ['Macedonia FYR', 11338],
-  ['Burundi', 3478],
-  ['Iran Islamic Rep.', 439514],
-  ['Serbia', 41432],
-  ['Malaysia', 314500],
-  ['Azerbaijan', 40748],
-  ['Jamaica', 14768],
-  ['Bahamas The', 12162],
-  ['Iraq', 197716],
-  ['Romania', 211803],
-  ['Slovak Republic', 95769],
-  ['Comoros', 649],
-  ['South Sudan', 2904],
-  ['Thailand', 455221],
-  ['Côte d Ivoire', 40389],
-  ['Kyrgyz Republic', 7565],
-  ['Albania', 13039],
-  ['New Zealand', 205853],
-  ['Sri Lanka', 87175],
-  ['São Tomé and Principe', 391],
-  ['Singapore', 323907],
-  ['Guyana', 3676],
-  ['Nigeria', 375771],
-  ['Northern Mariana Islands', 1242],
-  ['Ireland', 333731],
-  ['Chad', 9981],
-  ['Togo', 4813],
-  ['Faroe Islands', 2477],
-  ['Peru', 211389],
-  ['Tajikistan', 7146],
-  ['Sierra Leone', 3774],
-  ['Congo Rep.', 8723],
-  ['Guinea', 10491],
-  ['Equatorial Guinea', 12487],
-  ['Japan', 4872137],
-  ['Niger', 8120],
+  [382, 'Washington Square E', 265, 1],
+  [372, 'Broadway & E 14 St', 439, 2],
+  [591, 'Perry St & Bleecker St', 251, 2],
+  [583, 'E 11 St & Broadway', 284, 1],
+  [223, 'Allen St & Rivington St', 439, 1],
+  [541, 'Warren St & Church St', 331, 1],
+  [354, 'E 19 St & 3 Ave', 439, 1],
+  [916, 'Emerson Pl & Myrtle Ave', 395, 1],
+  [277, 'Mercer St & Bleecker St', 369, 1],
 ];
 
-var a = new A('a', null, dataset);
+var mainView = new A('mainView', undefined, dataset);
 
-var b = Operations.createChild('b', a, (obj, row) => obj.data[row][1] >= 5000000);
-var c = Operations.createChild('c', a, (obj, row) => obj.data[row][1] < 5000000);
+var tripDurationView = Operations.createChild('Trip Duration', mainView, [['filter', row => parseInt(row[0]) > 500]]);
+var stationStartLetter = Operations.createChild('Station Start Letter', mainView, [['filter', row => row[1].toLowerCase().startsWith('w')]]);
 
-var d = Operations.createChild('d', c, (obj, row) => obj.data[row][1] > 10000);
-var e = Operations.createChild('e', c, (obj, row) => obj.data[row][1] > 40000);
-var f = Operations.createChild('f', c, (obj, row) => obj.data[row][1] > 80000);
+var gender2 = Operations.createChild('Gender is 2', tripDurationView, [['filter', row => parseInt(row[3]) === 2]]);
 
-var g = Operations.createChild('g', b, (obj, row) => obj.data[row][1] > 80000);
-var h = Operations.createChild('h', b, (obj, row) => obj.data[row][1] > 80000);
-// var g = createChild('g', b);
-// var h = createChild('h', b);
+// console.log(tripDurationView);
+// console.log(stationStartLetter);
+// console.log(gender2);
 
-// var i = createChild('i', d);
-// var j = createChild('j', d);
 
-// var k = createChild('k', f);
+var interpreter = function(payload) {
+  Operations.query(this, [['filter', row => row[payload.data.index] > payload.data.value]], true);
+}
 
-// var l = createChild('l', k);
+mainView.setInterpreter(interpreter);
 
-d.propagate((obj, row) => obj.data[row][0] === 'India');
+// var c = Operations.createChild('c', a, (obj, row) => obj.data[row][1] < 5000000);
+
+// var d = Operations.createChild('d', c, (obj, row) => obj.data[row][1] > 10000);
+// var e = Operations.createChild('e', c, (obj, row) => obj.data[row][1] > 40000);
+// var f = Operations.createChild('f', c, (obj, row) => obj.data[row][1] > 80000);
+
+// var g = Operations.createChild('g', b, (obj, row) => obj.data[row][1] > 80000);
+// var h = Operations.createChild('h', b, (obj, row) => obj.data[row][1] > 80000);
+// // var g = createChild('g', b);
+// // var h = createChild('h', b);
+
+// // var i = createChild('i', d);
+// // var j = createChild('j', d);
+
+// // var k = createChild('k', f);
+
+// // var l = createChild('l', k);
+
+gender2.propagate({index: 2, value: 300});
